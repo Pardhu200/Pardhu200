@@ -129,27 +129,15 @@ while i == True:
     print('4 - Convert from weight percent to atomic percent')
     print('h - help!')
     print('e - Exit')
-    a = input('(1, 2, 3, 4, e): ')
-    if a == '1':
-        c = input('Insert composition in atomic fraction: ')
-        conversion = atf_to_atp(comp_dict(c))
-        conversion = format_comp(conversion)
-        print(f'This composition in atomic percent is {conversion}')
-        i = check_exit()
-    elif a == '2':
-        c = input('Insert composition in atomic fraction: ')
-        conversion = atf_to_wtp(comp_dict(c))
-        conversion = format_comp(conversion)
-        print(f'This composition in weight percent is {conversion}')
-        i = check_exit()
-    elif a == '3':
+    a = input('(1, 2 , e): ')
+    elif a == '1':
         c = input('Insert composition in atomic percent: ')
         check_percentage(comp_dict(c))
         conversion = atp_to_wtp(comp_dict(c))
         conversion = format_comp(conversion)
         print(f'This composition in weight percent is {conversion}')
         i = check_exit()
-    elif a == '4':       
+    elif a == '2':       
         c = input('Insert composition in weight percent: ')
         check_percentage(comp_dict(c))
         conversion = wtp_to_atp(comp_dict(c))
